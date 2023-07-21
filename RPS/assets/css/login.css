@@ -1,0 +1,288 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@media (min-width: 576px) {
+  .container, .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container, .container-sm, .container-md {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1140px;
+  }
+}
+
+html{
+  height: 100%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../img/bg.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.container{
+    position:absolute;
+    top:20%;
+    left:35%;
+    width: 500px;
+    padding: 50px;
+    background: rgba(188,145,99,255);
+    background-color: rgba(188, 145, 99, 0.5); 
+    transform: translate (-40%, -40%);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(254,244,210);
+    border-radius: 10px;
+    transition: 1s;
+  
+
+
+    /* background-color: #F4FEFD;
+    border: 3px solid;
+    border-radius: 20px;
+    margin: auto;
+    width: 25%;
+    height: 500px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px; */
+}
+.container h2 {
+  margin: 0 0  40px;
+  font-family: sans-serif;
+  text-shadow:4px 2px rgba(255,255,255);
+  font-size: 50px;
+  color: rgba(254,244,210);
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* CSS */
+  .container svg {
+    display: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: raleway;
+  }
+
+  .container svg text {
+    text-transform: uppercase;
+    font-size: 200px;
+    font-weight: 700;
+    text-shadow:2px 2px rgba(255,255,255);
+    animation: stroke 3s  ;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes stroke {
+    0% {
+      fill: rgba(56, 82, 79, 0);
+      stroke: rgba(254, 244, 210, 1);
+      stroke-width: 2;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+    }
+    70% {
+      fill: rgba(56, 82, 79, 0);
+      stroke: rgba(254, 244, 150, 1);
+    }
+    80% {
+      fill: rgba(56, 82, 79, 0);
+      stroke: rgba(254, 244, 150, 1);
+      stroke-width: 3;
+    }
+    99% {
+      fill: rgba(254, 244, 210, 1);
+      stroke: rgba(54, 95, 160, 0);
+      stroke-width: 0;
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+    }
+    100% {
+      fill: rgba(254, 244, 210, 1);
+      stroke: rgba(254, 244, 210, 0); /* Set stroke color to transparent */
+      stroke-width: 0;
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+    }
+  }
+  
+
+.row .input-box {
+  position: relative;
+}
+
+.row .input-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  color: rgba(255,255,255);
+  margin-bottom: 30px;
+  border:none;
+  border-bottom: 1px solid rgba(254,244,210);
+  outline:none;
+  background:transparent;
+}
+
+.row .input-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  color: rgba(254,244,200);
+  font-size: 20px;
+  font-weight: bold;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.container .row .input-box input:focus ~ label,
+.container .row .input-box input:valid ~ label {
+  top: -25px;
+  left:-2px;
+  color: rgba(255,255,255);
+  font-size: 16px;
+}
+
+.container form button{
+  position:relative;
+  display: block;
+  padding: 10px 20px;
+  color: rgba(254,244,210, 1);
+  background: rgba(188, 145, 99, 0.5); 
+  border-radius: 6px;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  left: 300px;
+}
+
+.container form button:hover {
+  background: rgba(188, 145, 90, 1);
+  border-radius: 20px;
+  transition: .5s;
+  color: #fff;
+  box-shadow:0 0 5px rgba(254,244,210),
+            0 0 25px rgba(188, 145, 90, 1),
+            0 0 50px rgba(188, 145, 90, 1),
+            0 0 100px rgba(188, 145, 90, 1)
+}
+
+.container button span{
+  position:absolute;
+  display:block;
+}
+.error{
+  height:0;
+  width: 100%;
+  margin-bottom: 50px;
+  border: 1px 0 solid ;
+
+}
+.error .text-danger {
+  color: red;
+  font-weight: bold;
+  /* Add any other desired styles */
+}
+
+
+/* .container button span:nth-child(1){
+  top:0;
+  left: -100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(90deg, transparent, rgba(254,244,210));
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0%{
+    left:-100%;
+  }
+  50%,100%{
+    left:100%;
+  }
+}
+
+.container button span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(254,244,210));
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s
+}
+
+@keyframes btn-anim2 {
+  0%{
+    top:-100%;
+  }
+  50%,100%{
+    top:100%;
+  }
+}
+
+.container button span:nth-child(3){
+  bottom:0;
+  right: -100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(90deg, transparent, rgba(254,244,210));
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.50s
+}
+@keyframes btn-anim3 {
+  0%{
+    right:-100%;
+  }
+  50%,100%{
+    right:100%;
+  }
+}
+.container button span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(254,244,210));
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4{
+  0%{
+    bottom:-100%;
+  }
+  50%,100%{
+    bottom:100%;
+  }
+} */
