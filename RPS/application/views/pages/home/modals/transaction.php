@@ -26,12 +26,6 @@
                                 <option disabled>--Select Option--</option>
                                 <option>Full Payment</option>
                                 <option>DownPayment</option>
-                                <option>Tuition</option>
-                                <option>Books</option>
-                                <option>Misc Fee</option>
-                                <option>Grad Fee</option>
-                                <option>School Supplies</option>
-                                <option>Others</option>
                             </select>
                         </div>
                     </div>
@@ -53,12 +47,12 @@
                             <label for="st_amount" class="col-form-label">Amount Paid</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-currency-peso">₱</i></span>
-                                <input type="text" class="form-control" name="st_amount" id="st_amount" required>
+                                <input type="number" class="form-control" name="st_amount" id="st_amount" required>
                             </div>
                         </div>
 
                         <div class="col-6">
-                        <label for="st_receiver" class="col-form-label">Remarks</label>
+                        <label for="st_receiver" class="col-form-label">Received By:</label>
                             <select class="form-control text-center" name="st_receiver" id="st_receiver">
                                 <option>Jem</option>
                                 <option>Franco</option>

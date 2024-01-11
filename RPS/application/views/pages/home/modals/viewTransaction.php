@@ -36,7 +36,6 @@
 
 
     <script>
-$(document).ready(function () {
     $('.btn_view').on('click', function () {
         var getID = $(this).closest('tr').find('.id').text();
         var url = "<?php echo base_url('view?id=') ?>" + getID;
@@ -76,5 +75,4 @@ $(document).ready(function () {
             }
         });
     });
-});
 </script>
